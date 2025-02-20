@@ -13,8 +13,8 @@ services:
     environment:
       - EMQX_NAME=emqx
       - EMQX_HOST=0.0.0.0
-      - EMQX_ALLOW_ANONYMOUS=false
-      - EMQX_AUTH__USER__1__USERNAME=mqttuser
-      - EMQX_AUTH__USER__1__PASSWORD=mqttpassword
+      - EMQX_ALLOW_ANONYMOUS=false  # Disables anonymous authentication
+      - EMQX_AUTH__MONGODB__ENABLE=false  # Disable MongoDB authentication
+      - EMQX_AUTH__USER__ENABLE=true  # Enable username/password authentication
     volumes:
-      - ./emqx.conf:/opt/emqx/etc/emqx.conf
+      - ./emqx_auth.conf:/opt/emqx/etc/plugins/emqx_auth_mnesia.conf
