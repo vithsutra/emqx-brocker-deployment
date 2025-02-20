@@ -17,8 +17,6 @@ services:
       - EMQX_NAME=emqx
       - EMQX_HOST=0.0.0.0
       - EMQX_ALLOW_ANONYMOUS=false  # Disable anonymous access
-      - EMQX_AUTH__USER__1__USERNAME=admin
-      - EMQX_AUTH__USER__1__PASSWORD=admin@123
     restart: always
 
 networks:
