@@ -11,8 +11,8 @@ services:
       - "8883:8883"
       - "18083:18083"
     volumes:
-      - ./emqx.conf:/etc/emqx/emqx.conf  # Mount EMQX config file
-      - ./passwords:/opt/emqx/data/passwords  # Mount password file
+      - ./emqx.conf:/etc/emqx/emqx.conf  # Mount EMQX config file 
+      - ./passwords:/opt/emqx/data/passwords/passwords
     environment:
       - EMQX_NAME=emqx
       - EMQX_HOST=0.0.0.0
