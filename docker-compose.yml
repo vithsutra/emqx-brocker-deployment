@@ -17,4 +17,4 @@ services:
       - EMQX_AUTH__MONGODB__ENABLE=false  # Disable MongoDB authentication
       - EMQX_AUTH__USER__ENABLE=true  # Enable username/password authentication
     volumes:
-      - ./emqx_auth.conf:/opt/emqx/etc/plugins/emqx_auth_mnesia.conf
+      - ./emqx_auth.conf:/opt/emqx/etc/plugins/emqx.conf
