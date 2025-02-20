@@ -11,7 +11,7 @@ services:
       - 18083:18083
     volumes:
       - ./emqx.conf:/etc/emqx/emqx.conf
-      - ./passwords:config/passwords
+      - ./passwords:/etc/emqx/config/passwords
     environment:
       - EMQX_NAME:emqx
       - EMQX_HOST:0.0.0.0
