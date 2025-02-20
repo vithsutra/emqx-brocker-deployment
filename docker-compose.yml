@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  emqx:
+    image: emqx/emqx:latest
+    ports:
+      - 1883:1883
+      - 8083:8083
+      - 8084:8084
+      - 8883:8883
+      - 18083:18083
+    volumes:
+      - ./emqx.conf:/etc/emqx/emqx.conf
+    environment:
+      - EMQX_NAME:emqx
+      - EMQX_HOST:0.0.0.0
+      - EMQX_ALLOW_ANONYMOUS:"false"
+      - EMQX_DEFAULT_USERNAME:admin
+      - EMQX_DEFAULT_PASSWORD:admin@123
+
+networks:
+   emqx-net:
+     driver: bridge
+
+
